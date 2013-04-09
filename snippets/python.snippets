@@ -133,9 +133,7 @@ snippet ipdb
 snippet pdbbb
 	import pdbpp; pdbpp.set_trace()
 snippet "
-	"""
-	${1:doc}
-	"""
+	"""${1:doc}"""
 # test function/method
 snippet test
 	def test_${1:description}(${2:`indent('.') ? 'self' : ''`}):
@@ -148,3 +146,7 @@ snippet testcase
 			${3:pass}
 snippet fut
 	from __future__ import ${1}
+# docstring writing
+snippet @arg
+	@arg  ${1:arg}: ${2}
+	@type $1: ${3}
