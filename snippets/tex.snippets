@@ -25,6 +25,12 @@ snippet tab
 	\begin{${1:tabular}}{${2:c}}
 	${3}
 	\end{$1}
+snippet tabs
+	\begin{tabular}{${1:c}}
+	  \toprule
+	  ${2}
+	  \bottomrule
+	\end{tabular}
 snippet thm
 	\begin[${1:author}]{${2:thm}}
 	${3}
@@ -172,11 +178,9 @@ snippet ft
 	\footnote{${1:text}}
 snippet fig
 	\begin{figure}
-	\begin{center}
-	    \includegraphics[scale=${1}]{Figures/${2}}
-	\end{center}
-	\caption{${3}}
-	\label{fig:${4}}
+		\centering
+		\includegraphics[width=${1}]{${2}}
+		\caption{${3}\label{fig:${4}}}
 	\end{figure}
 snippet tikz
 	\begin{figure}
@@ -219,6 +223,7 @@ snippet skeleton-doc
 	\usepackage{graphicx,latexsym,layout}
 	\usepackage{amsmath}
 	\usepackage{url} 
+	\usepackage{commath}
 	% Fancy fonts
 	%\usepackage[loosequotes]{MinionPro}
 	%\usepackage[onlytext]{MyriadPro}
